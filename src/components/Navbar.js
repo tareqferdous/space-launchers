@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ rocket, searchRocket }) => {
   return (
     <>
       <div className="h-12 md:h-16 bg-white shadow-md px-8 fixed w-full top-0 left-0 flex items-center">
@@ -26,6 +26,8 @@ const Navbar = () => {
             className="block w-80 shadow border-none rounded-xl focus:outline-none py-2 bg-gray-200 text-base text-gray-600 pl-8 pr-2 hidden md:block"
             type="text"
             placeholder="Search Rocket.."
+            value={rocket}
+            onChange={searchRocket}
           />
         </div>
       </div>
